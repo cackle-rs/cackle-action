@@ -1,0 +1,19 @@
+name: "cackle"
+description: "Check APIs and other permissions used by dependencies"
+author: "Cackle authors"
+
+inputs:
+  cackle-version:
+    description: "Cackle version to use"
+    required: false
+    default: "0.2.0"
+
+runs:
+  using: "composite"
+  steps:
+    - run: sudo apt-get update && sudo apt-get install bubblewrap
+      shell: bash
+    - run: curl --silent -L https://github.com/cackle-rs/cackle/releases/download/v${{ inputs.cackle-version }}/cackle-v${{ inputs.cackle-version }}-x86_64-unknown-linux-musl.tar.gz | tar -xzv -C "${{ github.action_path }}" --strip-components=1
+      shell: bash
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash
