@@ -6,7 +6,7 @@ inputs:
   cackle-version:
     description: "Cackle version to use"
     required: false
-    default: "0.3.0"
+    default: "0.4.0"
 
 runs:
   using: "composite"
