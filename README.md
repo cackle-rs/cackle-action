@@ -2,8 +2,8 @@
 
 ## Usage
 
-* Create a `cackle.toml` by following the instructions in the main
-  [https://github.com/cackle-rs/cackle](cackle repo).
+* Create a `cackle.toml` by following the instructions in the main [cackle
+  repo](https://github.com/cackle-rs/cackle).
 
 ## Example workflow - Validate checked-in Cargo.lock
 
